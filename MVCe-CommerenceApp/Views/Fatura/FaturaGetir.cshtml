@@ -1,0 +1,40 @@
+﻿@model MVCe_CommerenceApp.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Fatura Güncelleme Sayfası</h2>
+@using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
+{
+    <br />
+    @Html.HiddenFor(x => x.FaturaID)
+    @Html.LabelFor(x => x.FaturaSeriNo)
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FaturaSıraNo)
+    @Html.TextBoxFor(x => x.FaturaSıraNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.VergiDairesi)
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Saat)
+    @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimEden)
+    @*@Html.DropDownListFor(x => x.kategoriid, (List<SelectListItem>)ViewBag.dgr)*@
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimAlan)
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+    <br />
+    
+    <button class="btn btn-warning">Güncelle</button>
+
+
+}
+
+

@@ -1,0 +1,34 @@
+﻿@model MVCe_CommerenceApp.Models.Siniflar.SatisHareket
+@{
+    ViewBag.Title = "YeniSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Ürün Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.LabelFor(x => x.Urun)
+    @Html.DropDownListFor(x => x.urunid, (IEnumerable<SelectListItem>)ViewBag.satis, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari")
+    @Html.DropDownListFor(x => x.cariid, (IEnumerable<SelectListItem>)ViewBag.cari, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Personel)
+    @Html.DropDownListFor(x => x.personelid, (IEnumerable<SelectListItem>)ViewBag.prs, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Adet)
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.ToplamTutar)
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Satış Yap</button>
+
+</form>
+

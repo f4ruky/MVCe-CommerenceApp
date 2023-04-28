@@ -1,0 +1,41 @@
+﻿@model MVCe_CommerenceApp.Models.Siniflar.SatisHareket
+@{
+    ViewBag.Title = "SatisGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satış İşlemi Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("SatisGuncelle", "Satis", FormMethod.Post))
+{
+    <br />
+    @Html.HiddenFor(x => x.SatisID)
+    @Html.LabelFor(x => x.Urun)
+    @Html.DropDownListFor(x => x.urunid, (IEnumerable<SelectListItem>)ViewBag.satis, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari")
+    @Html.DropDownListFor(x => x.cariid, (IEnumerable<SelectListItem>)ViewBag.cari, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Personel)
+    @Html.DropDownListFor(x => x.personelid, (IEnumerable<SelectListItem>)ViewBag.prs, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Adet)
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.ToplamTutar)
+    @*@Html.DropDownListFor(x => x.kategoriid, (List<SelectListItem>)ViewBag.dgr)*@
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+
+
+}

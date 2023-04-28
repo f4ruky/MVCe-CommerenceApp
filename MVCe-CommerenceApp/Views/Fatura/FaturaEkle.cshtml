@@ -1,0 +1,38 @@
+﻿@model MVCe_CommerenceApp.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Fatura Sayfası Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.LabelFor(x => x.FaturaSeriNo)
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FaturaSıraNo)
+    @Html.TextBoxFor(x => x.FaturaSıraNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Saat)
+    @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.VergiDairesi)
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimEden)
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimAlan)
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+
+

@@ -1,0 +1,38 @@
+﻿@using MVCe_CommerenceApp.Models.Siniflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top = 20px">
+    <tr>
+        <th>ID</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Görsel</th>
+        <th>Departman</th>
+        <th>Güncelle</th>
+        <th>Satışlar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.PersonelID
+            </td>
+            <td> @k.PersonelAd</td>
+            <td> @k.PersonelSoyad</td>
+            <td> @k.PersonelGorsel</td>
+            @*<td> @k.PersonelAd</td>*@
+            <td> @k.Departman.DepartmanAd</td>
+            
+            <td><a href="/Personel/PersonelGetir/@k.PersonelID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@k.PersonelID" class="btn btn-default" style="background-color: darkviolet; color:white"> Detay</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Personel/PersonelEkle" class="btn btn-info">Personel Ekle</a>
+
+
