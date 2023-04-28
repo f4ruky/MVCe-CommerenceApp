@@ -45,5 +45,23 @@ namespace MVCe_CommerenceApp.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult FaturaDetay(int id)
+        {
+            var degerler = c.FaturaKalems.Where(x => x.faturaid == id).ToList();
+           
+            return View(degerler);
+        }
+        [HttpGet]
+        public ActionResult YeniKalem()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniKalem(FaturaKalem p)
+        {
+            c.FaturaKalems.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

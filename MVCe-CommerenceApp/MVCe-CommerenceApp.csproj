@@ -165,6 +165,7 @@
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
+    <Compile Include="Controllers\İstatistikController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\Cariler.cs" />
@@ -479,6 +480,46 @@
     <Content Include="Content\DataTables\css\semanticui.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="web2\css\bootstrap.css" />
+    <Content Include="web2\css\clndr.css" />
+    <Content Include="web2\css\jqvmap.css" />
+    <Content Include="web2\css\nav.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\ar2.png" />
+    <Content Include="web2\images\arrows.png" />
+    <Content Include="web2\images\avatar.jpg" />
+    <Content Include="web2\images\avatar1.jpg" />
+    <Content Include="web2\images\avatar2.jpg" />
+    <Content Include="web2\images\img-sprite.png" />
+    <Content Include="web2\images\into.png" />
+    <Content Include="web2\images\into1.png" />
+    <Content Include="web2\images\logo.png" />
+    <Content Include="web2\images\pp.jpg" />
+    <Content Include="web2\images\pp0.jpg" />
+    <Content Include="web2\images\pp01.jpg" />
+    <Content Include="web2\images\settings.png" />
+    <Content Include="web2\images\tick-mark.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\Chart1.js" />
+    <Content Include="web2\js\clndr.js" />
+    <Content Include="web2\js\easyResponsiveTabs.js" />
+    <Content Include="web2\js\jquery.easydropdown.js" />
+    <Content Include="web2\js\jquery.min.js" />
+    <Content Include="web2\js\jquery.nicescroll.js" />
+    <Content Include="web2\js\jquery.vmap.js" />
+    <Content Include="web2\js\jquery.vmap.sampledata.js" />
+    <Content Include="web2\js\jquery.vmap.world.js" />
+    <Content Include="web2\js\main.js" />
+    <Content Include="web2\js\moment-2.2.1.js" />
+    <Content Include="web2\js\site.js" />
+    <Content Include="web2\js\underscore-min.js" />
+    <Content Include="web2\resimler\book1.jpg" />
+    <Content Include="web2\resimler\book2.jpg" />
+    <Content Include="web2\resimler\book3.jpg" />
+    <Content Include="web2\resimler\book4.jpg" />
+    <Content Include="web2\resimler\book5.jpg" />
+    <Content Include="web2\resimler\img1.jpg" />
+    <Content Include="web2\w3layouts-License.txt" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -523,6 +564,9 @@
     <Content Include="Views\Fatura\Index.cshtml" />
     <Content Include="Views\Fatura\FaturaEkle.cshtml" />
     <Content Include="Views\Fatura\FaturaGetir.cshtml" />
+    <Content Include="Views\Fatura\FaturaDetay.cshtml" />
+    <Content Include="Views\Fatura\YeniKalem.cshtml" />
+    <Content Include="Views\İstatistik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
