@@ -43,8 +43,8 @@ namespace MVCe_CommerenceApp.Controllers
             DateTime bugün = DateTime.Today;
             var deger15 = c.SatisHarekets.Count(x => x.Tarih == bugün).ToString();
             ViewBag.d15 = deger15;
-            var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugün).Sum(y => y.ToplamTutar).ToString();
-            ViewBag.d16 = deger16;
+            //var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugün).Sum(y => y.ToplamTutar).ToString();
+            //ViewBag.d16 = deger16;
             return View();
         }
     }
