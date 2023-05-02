@@ -16,7 +16,7 @@
         <th>Personel ID</th>
         <th>Ad</th>
         <th>Soyad</th>
-        <th>Görsel</th>
+        
         <th>Satışlar</th>
     </tr>
     @foreach (var x in Model)
@@ -25,7 +25,7 @@
             <td>@x.PersonelID</td>
             <td>@x.PersonelAd</td>
             <td>@x.PersonelSoyad</td>
-            <td>@x.PersonelGorsel</td>
+            
             <td><a href="/Departman/DepartmanPersonelSatis/@x.PersonelID" class="btn btn-info">Satışlar</a></td>
         </tr>
     }

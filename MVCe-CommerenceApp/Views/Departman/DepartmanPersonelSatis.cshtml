@@ -12,10 +12,10 @@
 </ol>
 <table class="table table-condensed">
     <tr>
-        <th>Satış ID</th>
+        
         <th>Ürün</th>
         <th>Cari</th>
-        <th>Fiyat</th>
+        <th>Fiyat ₺</th>
         <th>Adet</th>
         <th>Toplam</th>
         <th>Tarih</th>
@@ -24,12 +24,12 @@
     @foreach (var x in Model)
     {
         <tr>
-            <td>@x.SatisID</td>
+            
             <td>@x.Urun.UrunAd</td>
             <td>@x.Cariler.CariAd @x.Cariler.CariSoyad</td>
-            <td>@x.Fiyat</td>
+            <td>@x.Fiyat ₺</td>
             <td>@x.Adet</td>
-            <td>@x.ToplamTutar</td>
+            <td>@x.ToplamTutar ₺</td>
             <td>@x.Tarih</td>
             <td><a href="#" class="btn btn-success">Yazdır</a></td>
         </tr>
