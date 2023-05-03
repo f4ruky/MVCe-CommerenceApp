@@ -2893,6 +2893,7 @@
     <Content Include="Views\Login\Partial2.cshtml" />
     <Content Include="Views\Shared\_CariLayout.cshtml" />
     <Content Include="Views\CariPanel\Siparislerim.cshtml" />
+    <Content Include="Views\Personel\PersonelListe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -2923,6 +2924,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="İmage\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="AdminLTE-3.0.4\plugins\fullcalendar-bootstrap\main.d.ts" />

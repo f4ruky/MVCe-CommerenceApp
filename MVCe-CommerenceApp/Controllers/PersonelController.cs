@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCe_CommerenceApp.Models.Siniflar;
+using System.IO;
 namespace MVCe_CommerenceApp.Controllers
 {
     public class PersonelController : Controller
@@ -24,6 +25,14 @@ namespace MVCe_CommerenceApp.Controllers
         [HttpPost]
         public ActionResult PersonelEkle(Personel p)
         {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "~/İmage/" + dosyaadi + uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                p.PersonelGorsel = "/İmage/" + dosyaadi + uzanti;
+            }
             c.Personels.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -36,6 +45,14 @@ namespace MVCe_CommerenceApp.Controllers
         }
         public ActionResult PersonelGuncelle(Personel p)
         {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "~/İmage/" + dosyaadi + uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                p.PersonelGorsel = "/İmage/" + dosyaadi + uzanti;
+            }
             var prsn = c.Personels.Find(p.PersonelID);
             prsn.PersonelAd = p.PersonelAd;
             prsn.PersonelSoyad = p.PersonelSoyad;
@@ -43,6 +60,11 @@ namespace MVCe_CommerenceApp.Controllers
             prsn.Departmanid = p.Departmanid;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult PersonelListe()
+        {
+            var sorgu = c.Personels.ToList();
+            return View(sorgu);
         }
 
     }
