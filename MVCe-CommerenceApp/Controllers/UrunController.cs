@@ -78,6 +78,24 @@ namespace MVCe_CommerenceApp.Controllers
             var degerler = c.Uruns.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult SatisYap(int id)
+        {
+            ViewBag.prs = new SelectList(c.Personels, "PersonelID", "PersonelAd", "PersonelSoyad");
+            var deger1 = c.Uruns.Find(id);
+            ViewBag.dgr1 = deger1.UrunId;
+            ViewBag.dgr2 = deger1.SatisFiyat;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SatisYap(SatisHareket p)
+        {
+            p.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            c.SatisHarekets.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index","Satis");
+            
+        }
        
 
     }

@@ -20,7 +20,7 @@
         @Html.LabelFor(x => x.PersonelGorsel)
         @*@Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })*@
         <input type="file" name="PersonelGorsel" />
-        <br />
+        <br /><br />
         @Html.LabelFor(x => x.Departman)
 
         @Html.DropDownListFor(x => x.Departmanid, (IEnumerable<SelectListItem>)ViewBag.departman, new { @class = "form-control" })
