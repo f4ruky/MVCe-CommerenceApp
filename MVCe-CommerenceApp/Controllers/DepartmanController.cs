@@ -13,7 +13,7 @@ namespace MVCe_CommerenceApp.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Departmans.Where(x=>x.Durum == true).ToList();
+            var degerler = c.Departmans.ToList();
             return View(degerler);
         }
         [HttpGet]
